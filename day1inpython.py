@@ -23,8 +23,8 @@ print(dict1)
 # Use of zip
 questions = ["name", "email", "age"]
 answers = ["Keshav Bhandari", "imksav@gmail.com", 21]
-for q,a in zip(questions, answers):
-  print("What is your {0}?\nMy {0} is {1}.".format(q,a))
+for q, a in zip(questions, answers):
+    print("What is your {0}?\nMy {0} is {1}.".format(q, a))
 
 # Use of Dict
 myDict = {
@@ -35,26 +35,28 @@ myDict = {
     "college": "Sunway International Business School"
 }
 print(myDict)
-print("My name is "+myDict["fName"]+" "+myDict["lName"]+".\nI'm "+myDict["age"]+" years old.\nI'm studying "+myDict["education"]+" at "+myDict["college"]+".")
+print("My name is "+myDict["fName"]+" "+myDict["lName"]+".\nI'm "+myDict["age"] +
+      " years old.\nI'm studying "+myDict["education"]+" at "+myDict["college"]+".")
 print("==========================")
-print("My name is "+myDict.get("fName")+" "+myDict.get("lName")+".\nI'm "+myDict.get("age")+" years old.\nI'm studying "+myDict.get("education")+" at "+myDict.get("college")+".")
+print("My name is "+myDict.get("fName")+" "+myDict.get("lName")+".\nI'm "+myDict.get("age") +
+      " years old.\nI'm studying "+myDict.get("education")+" at "+myDict.get("college")+".")
 print("==========================")
 for x in myDict:
-  print(x)
+    print(x)
 print("==========================")
 for x in myDict:
-  print(myDict[x])
+    print(myDict[x])
 print("==========================")
 for x in myDict.values():
-  print(x)
+    print(x)
 print("==========================")
 for x, y in myDict.items():
-  # print(x,y)
-  print(x+": "+y)
+    # print(x,y)
+    print(x+": "+y)
 
 # More of Set
-set1 = {1,3,5,7,9}
-set2 = {2,4,6,8,10}
+set1 = {1, 3, 5, 7, 9}
+set2 = {2, 4, 6, 8, 10}
 print(set1.union(set2))
 # set1.update(set2)
 set1.update(set2)
@@ -74,36 +76,36 @@ print(set1 ^ set2)
 print(set2 ^ set1)
 
 # Set
-mySet = {1,5,9,3,7}
+mySet = {1, 5, 9, 3, 7}
 print(mySet)
 print(5 in mySet)
 print(10 in mySet)
 mySet.add(11)
 print(mySet)
-mySet.update({13,15})
+mySet.update({13, 15})
 print(mySet)
 mySet.remove(5)
 print(mySet)
 # mySet.remove(5) gives error but
-mySet.discard(5) # doesn't give error
+mySet.discard(5)  # doesn't give error
 print(mySet)
-mySet.pop() # starts from begining rather than last indexing
+mySet.pop()  # starts from begining rather than last indexing
 print("###########")
 mySet.clear()
 print(mySet)
 
 # Tuple
-myTuple = (1,6,9,7,2)
+myTuple = (1, 6, 9, 7, 2)
 print(myTuple)
 if 10 in myTuple:
-  print("Yes Found")
+    print("Yes Found")
 else:
-  print("Not Found")
+    print("Not Found")
 print(9 in myTuple)
 print(10 in myTuple)
 
 # stack
-stack = [1,5,9,7]
+stack = [1, 5, 9, 7]
 stack.append(3)
 print(stack)
 stack.reverse()
@@ -116,11 +118,11 @@ print(stack)
 # WAP to accept inut from the user and check whether the input is positive or negative or zero.
 number = int(input("Enter a number: "))
 if(number > 0):
-  print("positive")
-elif(number<0):
-  print("Negative")
+    print("positive")
+elif(number < 0):
+    print("Negative")
 else:
-  print("Zero")
+    print("Zero")
 
 """**Loop Through List**
 
@@ -133,20 +135,20 @@ else:
 myList = ["Apple", "Ball", "Cat"]
 print(myList)
 for x in myList:
-  print(x)
+    print(x)
 print(myList[1])
 # use of range
-for i in range(3,32,7):
-  print(i)
+for i in range(3, 32, 7):
+    print(i)
 # check item from user input
 fruits = ["Apple", "Banana", "Mango", "Apple", "Banana"]
 fruit = input("Enter name of fruits:")
 if fruit in fruits:
-  print(fruit+ " is found")
+    print(fruit + " is found")
 else:
-  print("Not found")
-print(fruits.count("Apple")) # to count the data in a list
-print(fruits.index("Banana")) # place value of data in a list
+    print("Not found")
+print(fruits.count("Apple"))  # to count the data in a list
+print(fruits.index("Banana"))  # place value of data in a list
 print(fruits.index("Banana", 3))
 fruits.append("Orange")
 print(fruits)
@@ -169,57 +171,57 @@ fruits.pop()
 
 """
 
-a, b = 0,1
-while a<100:
-  print(a, end=",")
-  a,b = b, a+b
+a, b = 0, 1
+while a < 100:
+    print(a, end=",")
+    a, b = b, a+b
 
 # Learning List
-squares = [0,1,4,9,16,25,36]
+squares = [0, 1, 4, 9, 16, 25, 36]
 print(squares)
-print(squares[0]) # print view
-print(squares[:]) # print view
-print(squares[:0:]) # print view
-print(squares[:-4]) # print view
-print(squares[-4:]) # print view
-print(squares+[49,64,81]) # add data to existing list
-print(squares[:]) # print view
-squares.append(100) # add the data into list
+print(squares[0])  # print view
+print(squares[:])  # print view
+print(squares[:0:])  # print view
+print(squares[:-4])  # print view
+print(squares[-4:])  # print view
+print(squares+[49, 64, 81])  # add data to existing list
+print(squares[:])  # print view
+squares.append(100)  # add the data into list
 print(squares)
-print(len(squares)) # printing the length of list
-squares[5]=26
+print(len(squares))  # printing the length of list
+squares[5] = 26
 print(squares)
-letters = ['a','c', 'd', 'u']
+letters = ['a', 'c', 'd', 'u']
 print(letters)
-letters[1:3]=['e','i'] # add data into the given place value in list 
+letters[1:3] = ['e', 'i']  # add data into the given place value in list
 print(letters)
-letters[1:3]=[]
+letters[1:3] = []
 print(letters)
-letters[:]=[]
+letters[:] = []
 print(letters)
 a = ["Keshav", "Hari", "Sita", "Gita"]
 print(a)
-b = [1,2,3,4]
+b = [1, 2, 3, 4]
 print(b)
-c = [a,b] # adding list of data into a list
+c = [a, b]  # adding list of data into a list
 print(c)
 
 # Learning Strings
 fName = "Keshav"
 space = " "
 lname = "Bhandari"
-fullName =fName+space+lname # to concatate
+fullName = fName+space+lname  # to concatate
 print(fullName)
-print(fName[3]) # to print the character of given place value 
-print(len(fName)) # to get the length of string data
-print(fullName[2:6]) # include the begining and exclude the ending place value
+print(fName[3])  # to print the character of given place value
+print(len(fName))  # to get the length of string data
+print(fullName[2:6])  # include the begining and exclude the ending place value
 data1 = "     Hello       Guys!"
 # newData1 = strip(data1)
-newData1 = data1.strip() # strop() remove any whitespaces at the begining
+newData1 = data1.strip()  # strop() remove any whitespaces at the begining
 print(newData1)
-print(fullName.lower()) # lower() make all the letters in lowercase
-print(fullName.upper()) # upper() make all the letters in uppercase
-print(data1.replace("H", "#H")) # to replace the any letters in a string
+print(fullName.lower())  # lower() make all the letters in lowercase
+print(fullName.upper())  # upper() make all the letters in uppercase
+print(data1.replace("H", "#H"))  # to replace the any letters in a string
 print(fullName.split(" "))
 skills = "Teaching,Tutoring,Dancing,Singing,Cricket Playing,Programming,Documentation,Photoshop,Event Management,App Development,Software Development,Web Development"
 print(skills.split(","))
@@ -242,7 +244,7 @@ print(x+y)
 print(x-y)
 print(x*y)
 print(x/y)
-print(x%y)
+print(x % y)
 
 # Integer Data Type
 x = 5
@@ -251,8 +253,8 @@ print(x+y)
 print(x-y)
 print(x*y)
 print(x/y)
-print(x%y)
-print(type(x)) # to get the which type of data is assigned to the variable
+print(x % y)
+print(type(x))  # to get the which type of data is assigned to the variable
 
 # Starting Python
 print("Hello World!")
