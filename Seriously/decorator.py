@@ -65,7 +65,7 @@ print(operate(inc, 3))
 """
 # ==========================================
 
-
+"""
 def print_msg(msg):
     greeting = "Hello,"
 
@@ -75,3 +75,90 @@ def print_msg(msg):
 
 
 print_msg("Python is awesome.")
+"""
+"""
+# ==========================Main Self Learning Decorators==================
+# Method without @
+
+
+def printer():
+    print("Hello World!")
+
+
+def display_info(func):
+    def inner():
+        print("Executing", func.__name__, "function")
+        func()
+        print("Execution completed")
+    return inner
+
+
+decorated_func = display_info(printer)
+decorated_func()
+# print("=========================================")
+
+# Method with @
+
+
+def display_info(func):
+    def inner():
+        print("Executing", func.__name__, "function")
+        func()
+        print("Execution completed")
+    return inner
+
+
+@display_info
+def printer():
+    print("Hello World!")
+
+
+printer()
+"""
+# print("=========================================")
+
+"""
+def smart_divide(func):
+    def inner(a, b):
+        print("Dividing", a, "by", b)
+        if b == 0:
+            print("Cannot divide by 0!")
+            return
+        return func(a, b)
+    return inner
+
+
+@smart_divide
+def divide(a, b):
+    return a/b
+
+
+print(divide(6, 7))
+print(divide(5, 0))
+"""
+# print("=========================================")
+
+
+def star(func):
+    def inner(args):
+        print("*" * 10)
+        func(args)
+        print("*" * 10)
+    return inner
+
+
+def percent(func):
+    def inner(args):
+        print("%" * 10)
+        func(args)
+        print("%" * 10)
+    return inner
+
+
+@star
+@percent
+def printer(msg):
+    print(msg)
+
+
+printer("Decorators completed!")
