@@ -12,3 +12,8 @@ Types of testing:
    - load testing
    - performance testing
 """
+"""
+teardown()
+setup()
+
+"""
