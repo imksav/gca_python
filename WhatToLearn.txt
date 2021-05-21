@@ -1,0 +1,49 @@
+1.	Create Project Folder
+2.	Create Virtual environment:
+a.	virtualenv venv
+b.	/venv/Scripts/activate.bat
+3.	Install Django:
+a.	pip3 install django
+b.	pip3 uninstall django
+c.	pip3 install django==3.1
+d.	django-admin
+4.	Creating project:
+a.	django-admin startproject projectname
+b.	cd projectname
+c.	manage.py runserver
+d.	localhost://port
+e.	manage.py runserver port
+5.	Migration:
+a.	Manage.py migrate
+6.	Creating app:
+a.	Python manage.py startapp appname
+7.	Add Models:
+a.	Add codes
+8.	Migration in apps:
+a.	manage.py makemigrations
+9.	Change in code
+a.	Change in settings.py
+b.	Adding blog app as blog.apps.BlogConfig
+c.	USER_DEFINED_APPS, BUILT_IN_APPS, THIRD_PARTY_APPS
+10.	Create Files in Root Directory of your Project Folder:
+a.	.env.environment
+b.	.env
+c.	Paste secret key to .env.environment
+d.	Write your secret key here in .env
+11.	Import Decouple Package and add it on settings.py
+a.	pip install python-decouple
+12.	Creating Super Admin:
+a.	python manage.py createsuperuser
+username, email, password
+b.	Create Group and Users
+13.	Register models in admin.py
+14.	==================Done==================
+15.	Working on URLS and VIEWS:
+a.	Create urls.py for app
+b.	add path and include the app's urls path
+c.	create urlpatterns in app urls
+d.	create method in views and request HttpResponse
+e.	Learn orm
+f.	Learn model manager
+
+
